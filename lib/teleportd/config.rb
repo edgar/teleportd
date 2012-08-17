@@ -7,7 +7,7 @@ module Teleportd
     end
 
     def base_url
-      'http://api.teleportd.com'
+      'http://http://api.v2.teleportd.com/'
     end
   end
 end
