@@ -16,7 +16,11 @@ module Teleportd
     end
 
     def results
-      @results ||= parsed_response["hits"].map{|r|SearchResult.new(r)}
+      @results ||= if parsed_response["hits"]
+        parsed_response["hits"].map{|r|SearchResult.new(r)}
+      else
+        []
+      end
     end
 
     def each
